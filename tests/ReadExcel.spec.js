@@ -46,7 +46,7 @@ test('Upload download excel validation', async ({ page }) => {
   await page.locator('#fileinput').setInputFiles(filePath);
  
   const desiredRow = await page.getByRole('row').filter({ has: page.getByText("Papaya") });
-  await expect(desiredRow.locator('#cell-4-undefined')).toContainText('1000');
+  await expect(desiredRow.locator('#cell-4-undefined')).toContainText('1000'); // Adjusted selector to match the updated value cell
 });
 
 
