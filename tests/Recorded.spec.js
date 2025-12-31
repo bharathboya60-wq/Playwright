@@ -1,0 +1,11 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://www.google.com/?zx=1764424079701&no_sw_cr=1');
+  await page.getByRole('combobox', { name: 'Search' }).click();
+  await page.getByRole('combobox', { name: 'Search' }).fill('Rajinikanth');
+  await page.goto('https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DRajinikanth%26sca_esv%3D90ae87e741ae3c67%26source%3Dhp%26ei%3DkPkqaeyUAr-Nvr0PrqeSaA%26iflsig%3DAOw8s4IAAAAAaSsHoGEWc5cXFxUn3kmJja2Hc0jILrUj%26ved%3D0ahUKEwjsnJj0v5eRAxW_hq8BHa6TBA0Q4dUDCBA%26uact%3D5%26oq%3DRajinikanth%26gs_lp%3DEgdnd3Mtd2l6GgIYAyILUmFqaW5pa2FudGgyCBAuGIAEGLEDMgsQABiABBixAxiLAzILEAAYgAQYsQMYiwMyDhAAGIAEGLEDGIMBGIsDMgsQABiABBixAxiLAzIIEAAYgAQYiwMyDhAuGIAEGKQDGKgDGIsDMg4QABiABBixAxiDARiLAzIIEAAYgAQYiwMyDhAAGIAEGLEDGIMBGIsDSLlKULkrWL9IcAN4AJABAJgBygGgAZURqgEGMC4xMS4yuAEDyAEA-AEBmAIQoALXEagCCsICChAAGAMY6gIYjwHCAhoQLhiABBixAxjRAximAxjHARj4BRioAxiLA8ICFBAuGIAEGLEDGIMBGKgDGJkDGIsDwgIaEC4YgAQYsQMY0QMY0gMYgwEYxwEYqAMYiwPCAhcQLhiABBixAxjRAxjSAxjHARioAxiLA8ICERAuGIAEGJgDGKgDGJoDGIsDwgIaEAAYgAQYsQMYgwEYpgMY-AUYqAMYigUYiwPCAhQQLhiABBixAxioAxiYAxiaAxiLA8ICFxAuGIAEGLEDGIMBGKgDGJgDGJoDGIsDwgIUEC4YgAQYsQMYmAMYqAMYmgMYiwPCAhoQABiABBixAxiDARikAxj4BRioAxiKBRiLA8ICFxAuGIAEGKYDGMcBGKgDGIsDGI4FGK8BwgIREAAYgAQYsQMYgwEYigUYiwPCAg4QLhiABBioAxiaAxiLA8ICFxAuGIAEGLEDGIMBGKgDGIoFGJoDGIsDwgIdEC4YgAQYsQMYpgMYxwEY-AUYqAMYiwMYjgUYrwHCAggQABiABBixA8ICERAuGIAEGLEDGKgDGJoDGIsDwgIUEC4YgAQYsQMYgwEYqAMYmgMYiwPCAhoQLhiABBixAxiDARimAxjHARioAxiLAxivAcICCxAAGIAEGLEDGIMBwgIFEAAYgATCAgUQLhiABMICDBAuGIAEGLEDGAoYC8ICDxAAGIAEGLEDGAoYCxiLA8ICEhAAGIAEGLEDGIMBGAoYCxiLA8ICDBAAGIAEGAoYCxiLA8ICEhAuGIAEGKQDGKgDGAoYCxiLA5gDBfEFk5oqVK-q5OaSBwYzLjExLjKgB7OzAbIHBjAuMTEuMrgHzhHCBwUwLjguOMgHLw%26sclient%3Dgws-wiz%26sei%3DnfkqaeqcAd_b4-EPobGuoQ8&q=EhAkBQIBwCKwIcQ1KsRHpTPrGJ3zq8kGIjApCLHu_QmMzo4j33wW6P0LTZRzK6Hfz6bB6kuRHYnshCd740ptHRWP7EAlGOM84uAyAVJaAUM');
+  await page.locator('iframe[name="a-4qdze7530dw"]').contentFrame().getByRole('checkbox', { name: 'I\'m not a robot' }).click();
+  await page.getByRole('link', { name: 'Rajinikanth Wikipedia https' }).click();
+  await page.getByRole('link', { name: 'Dadasaheb Phalke Award' }).nth(1).click();
+});
