@@ -1,12 +1,12 @@
 import {test, expect} from '@playwright/test';
 const PlaceOrder = JSON.parse(JSON.stringify(require('../Utils/PlaceOrderTestData.json')));
+import { Customtest} from '../Utils/test-base.js';
 
-for(let data of PlaceOrder){
-test(`End to End Test ${data.product}`, async function({browser}){
+Customtest(`End to End Test with Fixutres`, async function({browser, placeOrderData}){
     const context = await browser.newContext();
-    const product = data.product;
-    const loginMail = data.loginMail;
-    const Password = data.Password;
+    const product = placeOrderData.product;
+    const loginMail = placeOrderData.loginMail;
+    const Password = placeOrderData.Password;
     const page = await context.newPage();
     const Products = page.locator(".card-body");
     await page.goto("https://rahulshettyacademy.com/client/");
@@ -14,6 +14,7 @@ test(`End to End Test ${data.product}`, async function({browser}){
     await page.locator("#userEmail").fill(loginMail);
     await page.locator("#userPassword").fill(Password);
     await page.locator("#login").click();
+    await page.waitForTimeout(5000);
     await page.locator(".card-body b") // wait for all network requests to finish(but this flaky)
     const title = await page.locator(".card-body b").allTextContents();
 
@@ -80,4 +81,3 @@ test(`End to End Test ${data.product}`, async function({browser}){
     console.log("Order Details ID:", orderDetailsId);
 
 })
-}
