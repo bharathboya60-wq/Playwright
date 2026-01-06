@@ -1,5 +1,5 @@
 import {test, expect, request} from '@playwright/test';
-import { APIUtil } from '..APIUtil.js';
+import { APIUtil } from '../Utils/APIUtil.js';
 // const { APIUtil } = require('./Utils.js/APIUtil.js');
 
 const LoginPayload = {userEmail: "Thalaivar@shivaji.com", userPassword: "Thalaivar@27"};

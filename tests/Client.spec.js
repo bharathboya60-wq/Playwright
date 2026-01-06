@@ -5,7 +5,7 @@ const { test, expect } = require('@playwright/test');
 //     console.log('This is the first test');
 // })
 
-test('Second Test', async function({ page }){
+test('@Web Second Test', async function({ page }){
     
     
     await page.goto('https://rahulshettyacademy.com/client/#/auth/login');

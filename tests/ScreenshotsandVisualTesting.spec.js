@@ -16,7 +16,7 @@ test("ScreenShots", async({browser}) => {
 
 });
 
-test.only("Visual Testing", async({browser}) => {
+test("Visual Testing", async({browser}) => {
     const context = await browser.newContext();
     const page = await context.newPage();
     await page.goto("https://www.flightaware.com/");

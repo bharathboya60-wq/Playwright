@@ -59,7 +59,7 @@ test("UI Controls", async function({ browser }){
 });
 
 
-test("Handling Child Tabs", async function({ browser }){
+test("@Web Handling Child Tabs", async function({ browser }){
     const context = await browser.newContext();
     const page = await context.newPage();
     await page.goto('https://rahulshettyacademy.com/loginpagePractise/');

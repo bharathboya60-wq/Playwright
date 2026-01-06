@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test("Assertions - More Validations", async({browser}) => {
+test("@Web Assertions - More Validations", async({browser}) => {
 
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -29,13 +29,13 @@ test("Assertions - More Validations", async({browser}) => {
 
     await page.locator('#alertbtn').click();
     
-    await page.pause(); 
+    // await page.pause(); 
 
     await page.locator('#mousehover').hover();
 
     const framePage = page.frameLocator("#courses-iframe")
 
-    await framePage.locator(".lucide.lucide-crown").click();
+    // await framePage.locator(".lucide.lucide-crown").click();
 
 
 

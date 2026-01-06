@@ -16,6 +16,7 @@ export default defineConfig({
   testDir: './tests',
   timeout: 30 * 1000,
   reporter: 'html',
+  workers: 2,  // number of parallel workers means number of tests to run in parallel
   expect: {
     timeout: 50000
   },

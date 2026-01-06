@@ -1,6 +1,6 @@
 import { url } from "inspector";
 import { test, expect } from "@playwright/test";
-import { APIUtil } from './Utils/APIUtil.js';
+import { APIUtil } from '../Utils/APIUtil.js';
 
 test("Security Test", async function({page}){
     const loginMail = "Thalaivar@shivaji.com"
