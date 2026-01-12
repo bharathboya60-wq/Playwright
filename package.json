@@ -9,14 +9,14 @@
   "devDependencies": {
     "@playwright/test": "^1.56.1",
     "@types/node": "^24.10.1",
-    "allure-playwright": "^3.4.3"
+    "allure-playwright": "^3.4.3",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "exceljs": "^4.4.0"
   },
   "scripts": {
-  "allure:generate": "allure generate allure-results --clean",
-  "allure:open": "allure open allure-report"
-}
-
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report"
+  }
 }
