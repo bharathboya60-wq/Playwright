@@ -1,5 +1,5 @@
 import {expect} from '@playwright/test';
-class Cart{
+export class Cart{
     constructor(page){
         this.page = page;
         this.Checkout = this.page.locator("button:has-text(\"Checkout\")")
@@ -42,4 +42,4 @@ class Cart{
 }
 }
 
-module.exports = {Cart};
+// module.exports = {Cart};

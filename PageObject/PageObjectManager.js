@@ -3,7 +3,7 @@ import {Dashboard} from './Dashboard.js';
 import { Cart } from './Cart.js';
 import { orders } from './orders.js';
 
-class PageObjectManager{
+export class PageObjectManager{
     constructor(page){
         this.page = page;
         this.loginPage = new LoginPage(this.page);
@@ -26,4 +26,4 @@ class PageObjectManager{
     }
 }
 
-module.exports = {PageObjectManager};
+// module.exports = {PageObjectManager};

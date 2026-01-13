@@ -1,5 +1,5 @@
 import {expect} from '@playwright/test';
-class orders {
+export class orders {
     constructor(page) {
         this.page = page; 
         this.Orders = this.page.locator("button[routerlink$='/dashboard/myorders']")
@@ -27,4 +27,4 @@ class orders {
 }
 }
 
-module.exports = {orders};
+// module.exports = {orders};
