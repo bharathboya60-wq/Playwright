@@ -18,6 +18,7 @@
   },
   "scripts": {
     "allure:generate": "allure generate allure-results --clean",
-    "allure:open": "allure open allure-report"
+    "allure:open": "allure open allure-report",
+    "CucumberRegression": "npx cucumber-js features/Ecommerce.feature --retry 1 --format html:cucumber-report.html"
   }
 }

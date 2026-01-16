@@ -5,7 +5,7 @@ import { PageObjectManager as POM} from '../../PageObject/PageObjectManager.js';
 
 
 Given('I login to Ecommerce application using {string} and {string}',{timeout: 20000} ,async function (string, string2) {
-    this.loginMail = "Thalaivar@shivaji.com"
+    this.loginMail = "Thalaivar@shivaji"
     const loginPage = await this.pom.getLoginPage();
     await loginPage.OpenURL("https://rahulshettyacademy.com/client/#/auth/login");
     await loginPage.loginToApplication(this.loginMail, "Thalaivar@27");
